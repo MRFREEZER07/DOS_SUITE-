@@ -1,8 +1,11 @@
 make the plan clear
 
-
+for now -->break main into pieces
 1. refactor the code
 2. try to run from client side
 3. obfuscate the client code
 4. add DB to monitor target reason bandwidth downtime
-5. supply input in cli
+5. supply input in cli\
+
+RESOURCE
+https://www.youtube.com/watch?v=NGLeprazvkM
