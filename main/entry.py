@@ -2,7 +2,7 @@
 
 
 import auth.authclass as auth1
-
+import libs.Apicalls as api1
 
 print("""██████╗  ██████╗ ███████╗    ███████╗██╗   ██╗██╗████████╗███████╗
 ██╔══██╗██╔═══██╗██╔════╝    ██╔════╝██║   ██║██║╚══██╔══╝██╔════╝
@@ -25,7 +25,6 @@ while True:
         command = input("ENTER THE COMMAND-->")
         if command in commands:
             command = command
-            print(command)
             break
 
 
@@ -42,7 +41,18 @@ if(command=="login"):
 if(command =="attack"):
     if(auth.isAuthenticated()):
         print("authenticated......")
-        target = input("ENTER THE SITE TO ATTACK -->")
+        api=api1.Apicall()
+        op =api.availableAttack()
+        print("Sites To Attack")
+        for sites in op:
+            print('[-]'+sites)
+        while True:
+            target = input("ENTER THE SITE TO ATTACK -->")
+            if(target not in op):
+                print("Target no in list , if you want to attack a new site ,make a attack request in out site")
+            else:
+                break
+    
         threads =input("ENTER NUMBER OF THREADS TO ATTACK -->")
         proxyNeed = input("DO U WANT TO USE PROXY (yes or no) -->")
         auth =auth1.Auth()

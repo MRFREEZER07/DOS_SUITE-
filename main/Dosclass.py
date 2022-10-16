@@ -22,6 +22,8 @@ class Dos():
         for process in children:
             process.send_signal(sig)
     
+    
+
     def makeAProperExit(self):
         self.lock.release()
         self.kill_child_processes(self.pid)

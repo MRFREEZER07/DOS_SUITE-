@@ -1,5 +1,3 @@
-
-from numpy import diff
 import requests
 import os
 import subprocess
