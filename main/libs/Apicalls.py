@@ -64,3 +64,6 @@ class Apicall():
         ongoingAttacks =self.getAllOnGoingAttacks()
         requestedAttacks =self.getAllRequestedAttacks()
         return set(ongoingAttacks+requestedAttacks)
+
+    def appendToOngoingList(self):
+        pass
